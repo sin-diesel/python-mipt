@@ -1,0 +1,9 @@
+[project]
+name = "pingpong"
+version = "0.0.1"
+authors = [
+  { name="Stanislav Sidelnikov", email="sidelnikov.si.001@gmail.com" },
+]
+description = "A python client and server with interaction. Part MIPT python course."
+readme="README.md"
+requires-python = ">=3.10"
