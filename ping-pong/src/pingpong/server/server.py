@@ -7,13 +7,13 @@ from contextlib import contextmanager as _contextmanager
 LOOPBACK_HOST = "127.0.0.1"
 LOOPBACK_PORT = 5000
 
-
 class Server:
     def __init__(self, host: str, port: int) -> None:
         self._host = host
         self._port = port
         self._sock = _socket.create_server((host, port), family=_socket.AF_INET)
         self._sock.listen()
+        self._connections_pool = []
 
     def close(self) -> None:
         self._sock.close()
