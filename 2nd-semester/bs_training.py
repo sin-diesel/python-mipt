@@ -32,8 +32,14 @@ def _main() -> None:
     nself_links = len(self_links)
     nother = nall - nnonwiki - nself_links
 
-    print("")
-
+    print(f"На странице {nimages} изображений.\n\n"
+          f"В таблице с описанием государства {ntags} рядов.\n\n"
+          f"В тексте {nwords} слов.\n\n"
+          f"В тексте статьи {ndates} дат.\n\n"
+          f"Ссылок в статье: {nall}, из них:\n\n"
+          f"- {nnonwiki} ведущих не на Википедию,\n\n"
+          f"- {nself_links} ведущих на саму себя,\n\n"
+          f"- {nother} других.")
 
 if __name__ == "__main__":
     _main()
